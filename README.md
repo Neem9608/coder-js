@@ -1,39 +1,51 @@
-# Carrito de Compras de Cursos
+# Tienda de cursos
 
-Este proyecto implementa un carrito de compras de cursos utilizando JavaScript. Permite al usuario seleccionar cursos de una lista y calcular el total a pagar.
+Este proyecto es una tienda de cursos en línea desarrollada con JavaScript, HTML y CSS.
 
 ## Funcionalidades
 
-- Muestra una lista de cursos disponibles para agregar al carrito.
-- Valida la selección del usuario y garantiza la entrada correcta de datos.
-- Calcula el total a pagar por los cursos seleccionados.
-- Proporciona mensajes y alertas interactivas para guiar al usuario.
+El usuario puede agregar cursos al carrito de compras.
+El usuario puede ver los detalles de un curso al hacer clic en él.
+El usuario puede eliminar cursos del carrito de compras.
+El carrito de compras mantiene la cantidad y el precio actualizado en todo momento.
+Los cursos agregados al carrito se almacenan en el almacenamiento local y se mantienen incluso si el usuario cierra el navegador.
 
-## Uso
+### Cómo usar "para los compañeros de coder"
 
-1. Al ejecutar el programa, se mostrará una lista de cursos disponibles.
-2. El usuario podrá indicar si desea continuar o no con la selección.
-3. En caso de continuar, se le pedirá al usuario que agregue cursos al carrito. Solo se aceptan los nombres de cursos válidos de la lista.
-4. Una vez que el usuario haya terminado de agregar cursos, se mostrará un resumen con los cursos seleccionados y el total a pagar.
-5. El usuario también podrá ver el total a pagar en la consola.
+Descarga o clona este repositorio y abre el archivo index.html en tu navegador. Una vez que estés en la página principal, puedes navegar por los cursos disponibles y agregarlos al carrito de compras haciendo clic en el botón "Agregar al carrito". Puedes acceder a tu carrito haciendo clic en el icono de carrito en la esquina superior derecha de la pantalla.
 
-## Requisitos
+## Estructura del proyecto
 
-- Navegador web compatible con JavaScript.
+### El proyecto se divide en tres secciones principales:
 
-## Contribución
+preentregasJs.html: Este archivo contiene la estructura HTML básica de la página y los elementos necesarios para mostrar los cursos disponibles y el carrito de compras.
+cursos.css: Este archivo contiene todo el código CSS utilizado para diseñar la página y hacerla responsiva.
+Implementa 3 Js:  "app.js,carrito.js,cursos.js" Estos archivos contienen todo el código JavaScript utilizado para agregar cursos al carrito, actualizar el carrito, eliminar cursos del carrito y almacenar los cursos en el almacenamiento local.
 
-Si deseas contribuir a este proyecto, sigue los siguientes pasos:
+## Sobre el código
 
-1. Haz un fork de este repositorio.
-2. Crea una rama con tu nueva funcionalidad: `git checkout -b nueva-funcionalidad`.
-3. Realiza los cambios y realiza los commits: `git commit -m "Agrega nueva funcionalidad"`.
-4. Sube los cambios a tu repositorio: `git push origin nueva-funcionalidad`.
-5. Crea una solicitud de extracción en este repositorio.
+### Aquí se describen las funciones principales que se utilizan en los archivos Js:
 
-<!-- ## Licencia
+Función agregarCurso
+Esta función se llama cuando el usuario hace clic en el botón "Agregar al carrito". Toma como argumento el ID del curso y agrega el curso correspondiente al carrito. Si el curso ya está en el carrito, simplemente se actualiza la cantidad. Luego se llama a la función actualizarCarrito para actualizar la vista del carrito.
 
-Este proyecto se distribuye bajo la licencia MIT. Puedes encontrar más información en el archivo [LICENSE](LICENSE). -->
+Función actualizarCarrito
+Esta función se llama cada vez que se agrega un curso al carrito, se elimina un curso del carrito o se actualiza la cantidad de un curso en el carrito. Actualiza la vista del carrito mostrando todos los cursos en el carrito y la cantidad y el precio total del carrito.
+
+Función eliminarCurso
+Esta función se llama cuando el usuario hace clic en el botón "Eliminar" junto a un curso en el carrito. Toma como argumento el ID del curso y elimina el curso correspondiente del carrito. Luego se llama a la función actualizarCarrito para actualizar la vista del carrito.
+
+#### Implementa localstorage
+Función guardarLocal 
+Esta función se llama cada vez que se agrega un curso al carrito o se elimina un curso del carrito. Actualiza el almacenamiento local con la lista actual de cursos en el carrito.
+
+Función cargarLocal
+Esta función se llama cada vez que se carga la página y carga la lista de cursos en el carrito desde el almacenamiento local, si hay alguno.
+
+
+### Feedback
+
+Espero su devolucion con todo el optimismo posible, si hay algo o muchas cosas que mejorar y me van a ayudar en los proximos proyectos, siempre son totalmente bienvenidos y recibidos con total aprecio.
 
 ## Contacto
 
