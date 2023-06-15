@@ -10,23 +10,28 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  height: 12vh;
+  height: 10vh;
   background-color: #1b1b1b;
 }
 
 .navbar-logo {
   justify-self: start;
+  justify-content: center;
+  align-items: center;
+
   margin-left: 20px;
   color: #fff;
-  margin-top: 4vh;
   cursor: pointer;
 }
 
 .ver-carrito {
   font-size: 25px;
   margin-right: 20px;
-  margin-top: 3.5vh;
   cursor: pointer;
+  color: #fff;
+  background-color: rgb(243, 156, 18);
+  border-radius: 0.3rem;
+  max-height: .2rem;
 }
 
 /*Banner styles*/
@@ -104,11 +109,12 @@ body {
 
 /*modal content*/
 .modal-container {
+  /* Estilos generales del modal */
   width: 80%;
   margin: 0 10%;
   max-height: 88vh;
-  color: #fff;
-  background-color: #121212;
+  color: #fff !important;
+  background-color: #121212eb;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,25 +127,30 @@ body {
 }
 
 .modal-container::-webkit-scrollbar {
+  /* Estilos de la barra de desplazamiento del modal */
   display: none;
 }
 .modal-header {
+  /* Estilos del encabezado del modal */
   display: flex;
   justify-content: space-around;
-  background-color: #0a0909;
+  background-color: #121212eb;
   color: #fff;
   width: 100%;
 }
 
 .modal-header-title {
+    /* Estilos del título del encabezado del modal */
   justify-self: start;
 }
 
 .modal-header-button {
+    /* Estilos del botón de cierre del modal */
   cursor: pointer;
 }
 
 .modal-container > .modal-content {
+    /* Estilos del contenido de cada producto en el carrito */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -149,20 +160,40 @@ body {
 }
 
 .modal-container > div > img {
+    /* Estilos de la imagen de cada producto en el carrito */
   height: 120px;
   width: 120px;
 }
 
 .total-content {
+    /* Estilos del total a pagar en el carrito */
   font-size: 25px;
   padding: 20px;
   text-align: center;
   padding-top: 20px;
 }
 
-/*se agregaron unas lineas de css con media querys para que se adapte mejor al responsive :)*/
-/* 
-@media only screen and (max-width: 750px) {
+.delete-curso {
+  /* Estilos del botón de eliminación de un producto */
+  cursor: pointer;
+}
+
+.cantidad-carrito {
+  /* Estilos del contador de productos en el carrito */
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 4px;
+  top: 30px;
+  right: 14px;
+  position: absolute;
+  display: none;
+}
+
+
+@media only screen and (max-width: 920px) {
+    /* Estilos para pantallas de ancho máximo de 750px (responsive) */
   .modal-container {
     width: 100%;
     margin: 0;
@@ -179,23 +210,26 @@ body {
     height: 80px;
     width: 80px;
   }
+} 
+
+/* estilos de libreria modo prueba */
+/* .my-swal-container {
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+}
+
+.my-swal-title {
+  color: #ff0000;
+  font-size: 24px;
+}
+
+.my-swal-text {
+  color: #333;
+  font-size: 18px;
+} 
+
+.my-swal-icon {
+  color: #ff0
 } */
 
-/*delete button product*/
-.delete-curso {
-  cursor: pointer;
-}
-
-/*CarritoCounter*/
-.cantidad-carrito {
-  background-color: red;
-  color: white;
-  border-radius: 50%;
-  font-size: 12px;
-  padding: 4px;
-  top: 37px;
-  right: 14px;
-  position: absolute;
-  display: none;
-}
 

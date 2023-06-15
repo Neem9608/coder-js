@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "nombre": "Curso de programación web",
+    "precio": 50,
+    "img": "../img/desarrolloWeb.jpg",
+    "descripcion": "Aprende a crear sitios web dinámicos y funcionales utilizando las últimas tecnologías web.",
+    "caracteristicas": [
+      "10 lecciones",
+      "Acceso de por vida",
+      "Certificado de finalización"
+    ],
+    "cantidad": 1
+  },
+  {
+    "id": 2,
+    "nombre": "Curso de diseño gráfico",
+    "precio": 30,
+    "img": "../img/disenio.jpg",
+    "descripcion": "Aprende a crear diseños impactantes y profesionales para impresos y digitales.",
+    "caracteristicas": [
+      "8 lecciones",
+      "Acceso de por vida",
+      "Certificado de finalización"
+    ],
+    "cantidad": 1
+  },
+  {
+    "id": 3,
+    "nombre": "Curso de marketing digital",
+    "precio": 100,
+    "img": "../img/marketingDigital.jpg",
+    "descripcion": "Aprende a promocionar tu negocio en línea utilizando técnicas de marketing digital.",
+    "caracteristicas": [
+      "12 lecciones",
+      "Acceso de por vida",
+      "Certificado de finalización"
+    ],
+    "cantidad": 1
+  },
+  {
+    "id": 4,
+    "nombre": "Curso de trading",
+    "precio": 150,
+    "img": "../img/trading.jpg",
+    "descripcion": "Aprende a Invertir en los mercados financieros",
+    "caracteristicas": [
+      "20 lecciones",
+      "Acceso de por vida",
+      "Certificado de finalización"
+    ],
+    "cantidad": 1
+  }
+]

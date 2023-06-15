@@ -1,51 +1,74 @@
-# Tienda de cursos
 
-Este proyecto es una tienda de cursos en línea desarrollada con JavaScript, HTML y CSS.
+# Transform - Tienda de cursos en línea 
+
+Transform es una tienda de cursos en línea donde puedes desarrollar tus habilidades y alcanzar tus metas a través de cursos especializados. Este proyecto final consiste en una aplicación web que utiliza HTML, CSS y JavaScript para crear una experiencia interactiva y atractiva para los usuarios.
+
+## Tecnologías utilizadas
+- HTML
+- CSS
+- JavaScript
+- JSON (simulador de API local)
+- SweetAlert2: Librería de JavaScript utilizada para mostrar mensajes y alertas interactivas.
+- Bootstrap: Framework de CSS utilizado para estilizar la página de manera rápida y sencilla.
+
+## Sobre el proyecto
+
+Transform consta de los siguientes archivos:
+
+- `index.html`: Página principal que muestra la tienda en línea de cursos.
+- `cursos.css`: Archivo CSS que contiene estilos personalizados para la tienda.
+- `cursos.json`: Archivo JSON que simula una API local y contiene la información de los cursos.
+- `cursos.js`: Archivo JavaScript que se encarga de mostrar los cursos en la tienda y gestionar la interacción del usuario.
+- `app.js`: Archivo JavaScript principal que inicializa la aplicación y se encarga de la gestión global del carrito de compras.
+- `carrito.js`: Archivo JavaScript que contiene las funciones relacionadas con el carrito de compras.
 
 ## Funcionalidades
 
-El usuario puede agregar cursos al carrito de compras.
-El usuario puede ver los detalles de un curso al hacer clic en él.
-El usuario puede eliminar cursos del carrito de compras.
-El carrito de compras mantiene la cantidad y el precio actualizado en todo momento.
-Los cursos agregados al carrito se almacenan en el almacenamiento local y se mantienen incluso si el usuario cierra el navegador.
+- Mostrar cursos: La página principal muestra una lista de cursos obtenidos del archivo `cursos.json`. Cada curso muestra su imagen, nombre, precio, descripción y características.
+- Agregar cursos al carrito: Al hacer clic en el botón "Comprar" de un curso, se agrega al carrito de compras. Si el curso ya está en el carrito, se muestra un mensaje de información.
+- Ver carrito: Al hacer clic en el enlace "Tienda" en la barra de navegación, se muestra el contenido del carrito en un modal. En el modal, se muestra la lista de cursos agregados al carrito, con la opción de eliminar cursos individualmente.
+- Contador de carrito: En la barra de navegación, se muestra un contador que indica la cantidad de cursos agregados al carrito.
+- Almacenamiento local: Los cursos agregados al carrito se almacenan en el almacenamiento local utilizando localStorage, lo que permite que los cursos persistan incluso si el usuario cierra la página o se recarga. Al cargar la página, el carrito se carga desde localStorage y se muestra en el modal de carrito.
 
-### Cómo usar "para los compañeros de coder"
+## Instrucciones de instalación
 
-Descarga o clona este repositorio y abre el archivo index.html en tu navegador. Una vez que estés en la página principal, puedes navegar por los cursos disponibles y agregarlos al carrito de compras haciendo clic en el botón "Agregar al carrito". Puedes acceder a tu carrito haciendo clic en el icono de carrito en la esquina superior derecha de la pantalla.
+1. Clona el repositorio en tu máquina local.
+2. Abre el archivo `index.html` en tu navegador web.
 
 ## Estructura del proyecto
+- `index.html` 
+- `cursos.css`
+- `cursos.json`
+- `cursos.js`
+- `app.js`
+- `carrito.js`
 
-### El proyecto se divide en tres secciones principales:
 
-preentregasJs.html: Este archivo contiene la estructura HTML básica de la página y los elementos necesarios para mostrar los cursos disponibles y el carrito de compras.
-cursos.css: Este archivo contiene todo el código CSS utilizado para diseñar la página y hacerla responsiva.
-Implementa 3 Js:  "app.js,carrito.js,cursos.js" Estos archivos contienen todo el código JavaScript utilizado para agregar cursos al carrito, actualizar el carrito, eliminar cursos del carrito y almacenar los cursos en el almacenamiento local.
 
-## Sobre el código
+## Sobre el codigo 
 
-### Aquí se describen las funciones principales que se utilizan en los archivos Js:
+El código se divide en varios archivos JavaScript que se encargan de distintas funcionalidades:
 
-Función agregarCurso
-Esta función se llama cuando el usuario hace clic en el botón "Agregar al carrito". Toma como argumento el ID del curso y agrega el curso correspondiente al carrito. Si el curso ya está en el carrito, simplemente se actualiza la cantidad. Luego se llama a la función actualizarCarrito para actualizar la vista del carrito.
+- `cursos.js`: Este archivo se encarga de obtener los datos de los cursos desde el archivo JSON `cursos.json` y mostrarlos en la tienda. También se encarga de gestionar la interacción del usuario al agregar cursos al carrito.
 
-Función actualizarCarrito
-Esta función se llama cada vez que se agrega un curso al carrito, se elimina un curso del carrito o se actualiza la cantidad de un curso en el carrito. Actualiza la vista del carrito mostrando todos los cursos en el carrito y la cantidad y el precio total del carrito.
+- `app.js`: Este es el archivo JavaScript principal de la aplicación. Se encarga de inicializar la aplicación, cargar el carrito de compras desde el almacenamiento local, y proporciona funciones globales para agregar cursos al carrito, eliminar cursos del carrito y actualizar el contador del carrito en la barra de navegación.
 
-Función eliminarCurso
-Esta función se llama cuando el usuario hace clic en el botón "Eliminar" junto a un curso en el carrito. Toma como argumento el ID del curso y elimina el curso correspondiente del carrito. Luego se llama a la función actualizarCarrito para actualizar la vista del carrito.
+- `carrito.js`: Este archivo contiene las funciones relacionadas con el carrito de compras, como pintar el contenido del carrito en el modal, eliminar cursos del carrito y calcular el total a pagar.
 
-#### Implementa localstorage
-Función guardarLocal 
-Esta función se llama cada vez que se agrega un curso al carrito o se elimina un curso del carrito. Actualiza el almacenamiento local con la lista actual de cursos en el carrito.
+Una de las funcionalidades más importantes es la implementación de localStorage para almacenar el carrito de compras del usuario de forma local en el navegador. Esto permite que los cursos agregados al carrito persistan incluso si se cierra la página o se recarga. Al cargar la página, el carrito se carga desde localStorage y se muestra en el modal de carrito.
 
-Función cargarLocal
-Esta función se llama cada vez que se carga la página y carga la lista de cursos en el carrito desde el almacenamiento local, si hay alguno.
+Se utilizan varias funciones clave en el código:
 
+ - `agregarCurso`: Esta función se llama cuando el usuario hace clic en el botón "Agregar al carrito" de un curso. Toma como argumento el ID del curso y agrega el curso correspondiente al carrito. Si el curso ya está en el carrito, simplemente se actualiza la cantidad. Luego se llama a la función   actualizarCarrito para actualizar la vista del carrito.
+- `actualizarCarrito`: Esta función se llama cada vez que se agrega un curso al carrito, se elimina un curso del carrito o se actualiza la cantidad de un curso en el carrito. Actualiza la vista del carrito mostrando todos los cursos en el carrito, junto con la cantidad y el precio total del carrito.
+- `eliminarCurso`: Esta función se llama cuando el usuario hace clic en el botón "Eliminar" junto a un curso en el carrito. Toma como argumento el ID del curso y elimina el curso correspondiente del carrito. Luego se llama a la función actualizarCarrito para actualizar la vista del carrito.
+- `guardarLocal`: Esta función se llama cada vez que se agrega un curso al carrito o se elimina un curso del carrito. Actualiza el almacenamiento local con la lista actual de cursos en el carrito.
+- `cargarLocal`: Esta función se llama cada vez que se carga la página y carga la lista de cursos en el carrito desde el almacenamiento local, si hay alguno.
 
 ### Feedback
 
-Espero su devolucion con todo el optimismo posible, si hay algo o muchas cosas que mejorar y me van a ayudar en los proximos proyectos, siempre son totalmente bienvenidos y recibidos con total aprecio.
+Agradezco cualquier feedback o sugerencia que puedas brindar. Si hay áreas que se pueden mejorar o sugerencias para futuros proyectos, son totalmente bienvenidas y serán recibidas con aprecio.
+
 
 ## Contacto
 
@@ -54,3 +77,4 @@ Si tienes alguna pregunta o sugerencia sobre este proyecto, no dudes en contacta
 
 
 Admer Escobar (Alumno en Coderhouse - Curso de JavaScript)
+ 

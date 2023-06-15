@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="../css/styles.css"> 
     <link rel="stylesheet" href="../css/cursos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+       <!--=============== BOXICONS ===============-->
+       <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
     <title>Transform.</title>
   </head>
   <body>
@@ -12,9 +20,10 @@
     <div class="nav-container">
       <nav class="navbar">
         <h1 class="navbar-logo">Transform.</h1>
-        <h1 class="ver-carrito" id="verCarrito">🛒<span id="cantidadCarrito" class="cantidad-carrito"></span></h1>
+        <h1 class="ver-carrito" id="verCarrito">Tienda <span id="cantidadCarrito" class="cantidad-carrito"></span></h1>
       </nav>
     </div>
+
 
     <!--banner-->
     <div class="banner">
@@ -30,8 +39,10 @@
     <!--modal container-->
     <div id="modalContainer" class="modal-container"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="../js/cursos.js"></script>
     <script src="../js/app.js"></script>
     <script src="../js/carrito.js"></script>
+
   </body>
 </html>
